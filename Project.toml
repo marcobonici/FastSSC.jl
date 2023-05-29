@@ -2,3 +2,6 @@ name = "FastSSC"
 uuid = "37e8ce18-d1d7-4c8c-8df3-ee5c7349b1cc"
 authors = ["Marco Bonici <bonici.marco@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+LoopVectorization = "bdcacae8-1622-11e9-2a5c-532679323890"
