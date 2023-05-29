@@ -5,7 +5,7 @@ using LoopVectorization
 function SSC_integral(volume_element, WA, WB, WC, WD, responseAB, responseCD, σ², nz, nl, ntomo, dz)
     result = zeros(length(ℓ_array), length(ℓ_array), ntomo, ntomo, ntomo, ntomo)
 
-    @tturbo for idxli in 1:nl
+    @turbo for idxli in 1:nl
         for idxlj in 1:nl
             for i in 1:ntomo
                 for j in 1:ntomo
