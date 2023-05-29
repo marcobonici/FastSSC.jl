@@ -2,8 +2,7 @@ module FastSSC
 
 using LoopVectorization
 
-function SSC_integral(volume_element, WA, WB, WC, WD, responseAB, responseCD, σ², nz, nl, dz)
-    ntomo = 10
+function SSC_integral(volume_element, WA, WB, WC, WD, responseAB, responseCD, σ², nz, nl, ntomo, dz)
     result = zeros(length(ℓ_array), length(ℓ_array), ntomo, ntomo, ntomo, ntomo)
 
     @tturbo for idxli in 1:nl
@@ -24,7 +23,7 @@ function SSC_integral(volume_element, WA, WB, WC, WD, responseAB, responseCD, σ
             end
         end
     end
-    
+
     return (dz^2) .* result
 end
 end # module FastSSC
